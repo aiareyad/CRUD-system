@@ -1,0 +1,370 @@
+
+html{
+
+    background-color: #040E10!important;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5))!important;
+}
+
+*{
+
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+
+    background-color:  #040E10!important;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5))!important;
+    height: 100%;
+    cursor: none;
+}
+
+
+/* ---------Fonts--------- */
+
+.great-vibes{
+
+    font-family: "Great Vibes", cursive !important;
+}
+
+.cinzel{
+
+    font-family: "Cinzel", serif !important;
+}
+
+
+/* ---------------------- */
+
+.first-page{
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(../imgs/bg1.jpg);
+    position: 50% 50%;   
+    background-size: 100% 100%; 
+    background-size: cover;
+    height: 100vh;
+}
+
+.second-page{
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(../imgs/bg2.jpg);
+    background-size: cover;
+    height: 100vh;
+    display:block;
+}
+
+/* ---------------------- */
+
+/* ------- Appear ------- */
+
+#hidden{
+
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 1s;
+    animation-name: fadeIn;
+}
+
+#one{
+
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 1.2s;
+    animation-name: fadeIn;
+}
+
+#two{
+
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 1.4s;
+    animation-name: fadeIn;
+}
+
+#three{
+
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 1.6s;
+    animation-name: fadeIn;
+}
+
+#four{
+
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 1.8s;
+    animation-name: fadeIn;
+}
+
+#five{
+
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 2s;
+    animation-name: fadeIn;
+}
+
+#six{
+
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 2.2s;
+    animation-name: fadeIn;
+}
+
+#seven{
+
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 2.4s;
+    animation-name: fadeIn;
+}
+
+.seven{
+
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 2.6s;
+    animation-name: fadeIn;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* -------------------- */
+
+
+/* Overriding on Bootstrap */
+
+
+[data-bs-theme=dark] {
+
+    --bs-body-bg: transparent!important;
+}
+
+.form-control{
+
+    border: var(--bs-border-width) solid transparent!important;
+}
+
+.btn:focus {
+
+    outline: 0;
+    box-shadow: none !important;
+}
+
+.btn:first-child:active{
+
+    border-color: transparent!important;
+    transition: all 0.5s ease;
+}
+
+.form-control:focus{
+
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    border-color: #EFD1A0!important;
+    outline: 0;
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.25)!important;
+}
+
+.form-floating>.form-control:focus~label::after{
+
+    position: absolute;
+    inset: 1rem 0.375rem;
+    z-index: -1;
+    height: 1.5em;
+    content: "";
+    background-color: transparent!important;
+}
+
+.custom-file-upload {
+
+    display: inline-block !important;
+    padding: 6px 12px !important;
+    cursor: pointer !important;
+    color: #EFDFD0 !important; 
+    border-radius: 4px !important;
+    font-size: 16px !important;
+  }
+  
+#fileInput {
+
+    display: none;
+}
+
+.background-none{
+
+    background-color: rgba(0, 0, 0, 0.214)!important;
+}
+  
+/* ---------------------------------- */
+
+.main-header{
+
+    position:relative
+}
+
+.main-header .img1 {
+    position: absolute;
+    width: 1.9%;
+    right: 37%;
+    top: 36%;
+    animation: glow1 4s infinite;
+    animation-delay: 2.78s;
+    animation-name: glow1;
+    opacity: 0;
+}
+
+.main-header .img2 {
+    position: absolute;
+    width: 3.2%;
+    top: 44%;
+    right: 49%;
+    animation: glow2 6s infinite;
+    animation-delay: 2.4s;
+    animation-name: glow2;
+    opacity: 0;
+}
+
+@keyframes glow1 {
+
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+        width: 1.9%;
+    }
+    40%{
+        opacity: 0;
+        width: 2%;
+    }
+    60%{
+        opacity: 1;
+        width: 1.8%;
+    }
+    80%{
+        opacity: 0;
+        width: 1.9%;
+    }
+    100%{
+
+        width: 0;
+    }
+}
+
+@keyframes glow2 {
+
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+        width: 3.2%;
+    }
+    40%{
+        opacity: 0;
+        width: 3.3%;
+    }
+    60%{
+        opacity: 1;
+        width: 3.1%;
+    }
+    80%{
+        opacity: 0;
+        width: 3.2%;
+    }
+    100%{
+
+        width: 0;
+    }
+}
+
+.second-page .header{
+
+    background-image: url(../imgs/btn3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 17%;
+    padding: 20px 30px 50px 30px;
+}
+
+.text-color {
+
+    color: #E4D5C6!important;
+}
+
+.f60{
+
+    font-size: 60px;
+}
+
+.f45{
+
+    font-size: 45px;
+}
+
+.cursor img{
+
+    width: 40px;
+    transform: translate(-50%, -50%);
+}
+
+.update-btn-glow1 {
+
+    position: absolute;
+    width: 30px;
+    right: 51%;
+    bottom: 14.5%;
+}
+
+.update-btn-glow2 {
+
+    position: absolute;
+    width: 20px;
+    right: 45%;
+    bottom: 12%;
+}
+
+.update-btn-glow3 {
+
+    position: absolute;
+    width: 35px;
+    right: 47%;
+    bottom: 15%;
+}
+
+.update-btn-glow4 {
+
+    position: absolute;
+    width: 50px;
+    right: 48%;
+    bottom: 11%;
+}
+
+.update-btn-glow5{
+
+    position: absolute;
+    width: 50px;
+    right: 48%;
+    bottom: 11%;
+}
+
+.update-btn-glow1 {
+    position: absolute;
+    width: 30px;
+    right: 52%;
+    bottom: 13%;
+}
+
+.stars {
+    display: none;
+}
+

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD system</title>
+
+  <link rel="stylesheet" href="CSS/bootstrap.min.css">
+  <link rel="stylesheet" href="CSS/all.min.css">
+  <link rel="stylesheet" href="CSS/main.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+  <link rel="icon" type="image/x-icon" href="imgs/favicon.png">
+
+  <link rel="stylesheet" href="Great_Vibes/GreatVibes-Regular.ttf">
+  <link rel="stylesheet" href="Great_Vibes/OFL.txt">
+  <!-- Fonts -->
+
+  <!-- Great Vibes Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Great+Vibes&family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Cinzel Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Cinzel:wght@400..900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Great+Vibes&family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="cursor">
+    <img src="imgs/star.png" alt="">
+  </div>
+
+  <div class="crud">
+
+    <div class="first-page d-flex justify-content-center align-items-center">
+
+      <div class="container pt-5">
+
+        <div class="main-header">        
+        
+        <h2 class="text-center mb-5 cinzel f60 text-color" id="hidden">CRUD <span id="hidden" class="text-color text-center mb-5 great-vibes f45">System</span></h2>
+        
+        <img src="imgs/star.png" class="img1" alt="glowing star">
+        <img src="imgs/star.png" class="img2" alt="glowing star">
+        <!-- <img src="imgs/star.png" class="img3" alt="glowing star"> -->
+      </div>
+    
+
+        <div class="form-floating mb-3 cinzel text-color" id="one">
+    
+          <input oninput="inputValidation('productName', 'name', 'nameAlert')" type="text" class="form-control background-none" id="productName" placeholder=""/>
+          <label for="productName">Product Name</label>
+          
+          <div id="nameAlert" class="alert alert-danger m-2 d-none">Please insert a valid product name!</div>
+        </div>
+    
+        <div class="form-floating mb-3 cinzel text-color"id="two">
+    
+          <input oninput="inputValidation('productPrice', 'price', 'priceAlert')" type="number" class="form-control background-none" id="productPrice" placeholder=""/>
+          <label for="productPrice">Product Price</label>
+          <div id="priceAlert" class="alert alert-danger m-2 d-none">Please insert a Valid number (1-90)</div>
+        </div>
+    
+        <div class="form-floating mb-3 cinzel text-color"id="three">
+    
+          <input oninput="inputValidation('productCat', 'category', 'catAlert')" type="text" class="form-control background-none" id="productCat" placeholder=""/>
+          <label for="productCat">Product Category</label>
+          <div id="catAlert" class="alert alert-danger m-2 d-none">Please insert a valid product category! Such as (Tv/Phone/Laptop)</div>
+        </div>
+    
+        <div class="form-floating mb-3 cinzel text-color"id="four">
+    
+          <textarea oninput="inputValidation('productDesc', 'desc', 'descAlert')" type="text" class="form-control background-none" id="productDesc" placeholder=""></textarea>
+          <label for="productDesc">Product Condition</label>
+          <div id="descAlert" class="alert alert-danger m-2 d-none">Please write at least 3 characters! (Used - New - Refurbished)</div>
+        </div>
+    
+
+        <div class="mb-3 cinzel text-color"id="five">
+  
+          <input
+            type="file"
+            accept="image/*"
+            class="form-control background-none sparkly-gold-border"
+            id="imgInput"
+            placeholder="Please Select an image"
+            onclick="uploadImg()"/>
+        </div>
+  
+        <div class="btns d-flex justify-content-center" id="six">
+          <button onclick="addProduct(); scrollToBottom();" class="btn custom-file-upload mt-3 great-vibes fs-2" id="addBtn">
+            Add Product
+          </button>
+
+          <button onclick="updateProduct(); scrollToBottom(); removeAlerts();" class="btn custom-file-upload mt-3 great-vibes fs-2 d-none" id="updateBtn">
+            <span style="color: #ADA479;">Update Product</span> 
+          </button>
+
+          <div class="stars" id="hoverElement">
+
+            <!-- <img src="imgs/star.png" class="update-btn-glow1" alt="glowing star">
+            <img src="imgs/star.png" class="update-btn-glow2" alt="glowing star">
+            <img src="imgs/star.png" class="update-btn-glow3" alt="glowing star">
+            <img src="imgs/star.png" class="update-btn-glow4" alt="glowing star"> -->
+            <img src="imgs/star.png" class="update-btn-glow5" alt="glowing star">
+          </div> 
+    
+        </div>
+      </div>
+    </div>
+
+
+    <div class="second-page"> 
+
+      <div class="header text-color" id="seven">
+        
+        <h2 class="cinzel fs-2 text-center pt-5 mb-3">Products</h2>
+      </div>
+
+      <div class="message d-flex justify-content-center fw-lighter d-block text-color" id="seven" style="color: #999077;">
+
+        <p class="great-vibes fs-1">Products you add will appear below</p>
+      </div>
+
+        <div class="container pt-5">
+
+          <input 
+          type="text" 
+          class="form-control background-none my-5 seven" 
+          placeholder="Search by Name" 
+          oninput="searchByName()" 
+          id="searchByName">
+
+          <div class="row gy-5 seven" id="row">
+
+          </div>
+           
+        </div>
+      
+    </div>
+  </div>
+
+
+  
+
+    <script src="JavaScript/main.js"></script>
+    <script src="JavaScript/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
