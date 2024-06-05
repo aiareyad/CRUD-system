@@ -49,7 +49,7 @@ function displayProduct(p, index) {
             <h2 class="h4 mt-3 cinzel">${p.name}</h2>    
             <span class="cinzel rounded px-2 mb-3" style="background-color: #636A51;">${p.category}</span>   
             <p class="cinzel">${p.desc}</p>
-            <span class="cinzel fw-bold fs-4" style="color: rgb(191, 183, 164);">${p.price}$</span>       
+            <span class="cinzel fw-bold fs-4" style="color: rgb(191, 183, 164);">${p.price}EGP</span>       
             <button onclick="deleteProduct(${index})" class="btn w-100 custom-file-upload mt-3 cinzel fs-4">Delete</button>
             <button onclick='setupFormToUpdate(${index}); scrollToTop();' class="btn w-100 custom-file-upload mt-3 cinzel fs-4" style="color: #ADA479;">Update</button>
         </div>
