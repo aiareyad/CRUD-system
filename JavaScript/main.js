@@ -105,7 +105,7 @@ function inputValidation(inputId, regexKey, alertElementId) {
     var input = document.getElementById(inputId);
     
     var regex = {
-        name: /^[A-Za-z]+\s[A-Za-z]|[A-Za-z][A-Za-z]$/,
+        name: /^[A-Za-z0-9]+\s[A-Za-z0-9].*|[A-Za-z0-9][A-Za-z0-9].*$/,
         price: /^[1-9][0-9]*$/,
         category: /^[A-Za-z]+\s[A-Za-z]|[A-Za-z][A-Za-z]$/,
         desc: /.{3,}/
