@@ -1,6 +1,7 @@
-@media screen and(min-width: 320px) and (max-width: 1024){
+@media screen and (min-width: 320px) and (max-width: 1024px){
 
     .second-page .header {
+
         background-image: url(../imgs/btn3.png);
         background-position: center;
         background-repeat: no-repeat;
