@@ -150,14 +150,14 @@ function uploadImg(){
     URL.createObjectURL(imageInput.files[0]);
 }
 
-var img = document.querySelector('.cursor img');
+// var img = document.querySelector('.cursor img');
 
-img.style.position = 'absolute';
+// img.style.position = 'absolute';
 
-document.addEventListener('mousemove', function(e) {
-    img.style.left = e.pageX + 'px';
-    img.style.top = e.pageY + 'px';
-});
+// document.addEventListener('mousemove', function(e) {
+//     img.style.left = e.pageX + 'px';
+//     img.style.top = e.pageY + 'px';
+// });
 
 // document.addEventListener('DOMContentLoaded', function() {
 //     var addBtn = document.getElementById('addBtn');
